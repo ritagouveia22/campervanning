@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Campervan Trip 🚐</title>
+    
+    <style>
+          h1 {
+            text-align: center;
+            font-size: 51px;
+            color: #562349;
+            margin: 10px auto 20px;
+          }
+
+          h2 {
+            text-align: center;
+            font-weight: 200;
+            margin: 0 auto 30px;
+          }
+
+          img {
+            display: block;
+            margin: 10px auto 40px;
+            max-width: 350px;
+            padding: 10px auto;
+            border-radius: 50%;
+          }
+
+          p {
+            line-height: 1.5;
+            font-size: 13px;
+            text-align: center;
+          }
+
+          button {
+            display: block;
+            margin: 30px auto 40px;
+            border: 1px solid #ad6989;
+            border-radius: 30px;
+            color: white;
+            background-color: #ad6989;
+            padding: 20px 30px;
+            font-size: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+          }
+
+          button:hover {
+            color: #ad6989;
+            background-color: white;
+            cursor: pointer;
+          }
+
+          hr {
+            border: 1px solid #562349;
+            max-width: 70%;
+          }
+
+          .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            font-family: Courier, monospace;
+            background: linear-gradient(#fee2b3, #ffa299);
+            border-radius: 10px;
+          }
+
+          .text {
+            font-size: 13px;
+          }
+          .know-more {
+            color: #ad6989;
+            text-decoration: none;
+          }
+
+          .travelSuggestions {
+            font-size: 12px;
+            border: 1px solid #562349;
+            border-radius: 10px;
+            max-width: 70%;
+            margin: 30px auto 30px;
+            padding: 20px 10px;
+            line-height: 20px;
+          }
+
+          .know-more:hover {
+            color: #562349;
+            text-decoration: underline;
+          }
+        </style>
+        </head>
+      <body>
+        <div class="container">
+          <h1>Campervanning</h1>
+          <h2>
+            <em> Discover Portugal by Campervan</em>
+            🚐
+          </h2>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/337/original/Head.jpg?1592950553"
+            alt="Campervan"
+          />
+          <p class="text">
+            Wandering around Portugal in a camper van or motorhome is a
+            delightful way of discovering the amazing variety of landscapes in
+            our country. You can get to know the entire territory with more
+            freedom, at your own pace and in safety.
+            <br />
+            To get the most from this kind of trip, you must respect the rules
+            operating in each place; don't stay in illegal or unlicensed places
+            or in unofficial parking lots where the conditions might not be safe
+            and comfortable, and you could be subject to action from the
+            authorities.
+            <br />
+            You should also show the greatest civic awareness for the community
+            that welcomes you, and for nature, respecting the space of others,
+            so don’t make too much noise, and do leave the site as you found it.
+          </p>
+          <p>
+            <a
+              href="https://www.visitportugal.com/en/content/campervanning"
+              target="_blank"
+              class="know-more"
+            >
+              <strong> Know more about Campervanning in Portugal </strong>
+            </a>
+          </p>
+          <p class="travelSuggestions">
+            <strong>Travel Suggestions</strong>
+            <br />
+            <span>
+              Get inspiration from our itineraries. Click the button!
+            </span>
+          </p>
+          <button>Choose your roadtrip</button>
+          <hr />
+          <p>This page was coded by Rita</p>
+        </div>
+        <script>
+          function chooseTrip() {
+            let name = prompt("What is your first name?");
+            let destination = prompt(
+              "What's your favorite destination? West, North or Lisbon?"
+            );
+
+            destination = destination.toLowerCase();
+            destination = destination.trim();
+            let roadtrip = document.querySelector("span");
+
+            if (destination === "west") {
+              roadtrip.innerHTML =
+                "Hi " +
+                name +
+                "! 👋 <br/> Here is your West roadtrip: <br /> Lisbon &#8594 Peniche &#8594 Monastery Heritage &#8594 Coimbra &#8594 Porto";
+            } else if (destination === "north") {
+              roadtrip.innerHTML =
+                "Hi " +
+                name +
+                "! 👋 <br/> Here is your North roadtrip: <br /> Porto &#8594 Braga &#8594 Peneda-Gerês &#8594 Viana do Castelo &#8594 Porto";
+            } else if (destination === "lisbon") {
+              roadtrip.innerHTML =
+                "Hi " +
+                name +
+                "! 👋 <br/> Here is your Lisbon roadtrip: <br /> Lisbon &#8594 Cascais &#8594 Sintra &#8594 Ericeira & Mafra &#8594 Lisbon";
+            } else {
+              alert(
+                "Hi " +
+                  name +
+                  "! 👋 Please email us for other roadtrip suggestions."
+              );
+            }
+          }
+          let button = document.querySelector("button");
+          button.addEventListener("click", chooseTrip);
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
